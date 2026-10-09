@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18503713257"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18503713257');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Seguro negado? Análise da negativa da seguradora | Luiz H. Koakoski Advogado | OAB/RS 134.934</title>
@@ -246,7 +254,7 @@
 <!-- ===== Origem do contato e conversão do Google Ads ===== -->
 <script>
 (function(){
-  var ADS_ID='';     // cole aqui o ID da conta do Google Ads, ex.: 'AW-1234567890'
+  var ADS_ID='AW-18503713257';     // cole aqui o ID da conta do Google Ads, ex.: 'AW-1234567890'
   var ADS_LABEL='';  // cole aqui o rótulo da conversão "Clique no WhatsApp"
   var fromAds=/[?&](gclid|gbraid|wbraid|gad_source)=/.test(location.search);
   try{ if(fromAds){sessionStorage.setItem('lk_ads','1');} else {fromAds=sessionStorage.getItem('lk_ads')==='1';} }catch(e){}
@@ -257,7 +265,7 @@
       if(window.gtag&&ADS_ID&&ADS_LABEL){ gtag('event','conversion',{send_to:ADS_ID+'/'+ADS_LABEL}); }
     });
   }
-  if(ADS_ID){
+  if(ADS_ID&&!window.gtag){
     var s=document.createElement('script'); s.async=true;
     s.src='https://www.googletagmanager.com/gtag/js?id='+ADS_ID; document.head.appendChild(s);
     window.dataLayer=window.dataLayer||[]; window.gtag=function(){dataLayer.push(arguments);};
