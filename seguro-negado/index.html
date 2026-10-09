@@ -255,14 +255,14 @@
 <script>
 (function(){
   var ADS_ID='AW-18503713257';     // cole aqui o ID da conta do Google Ads, ex.: 'AW-1234567890'
-  var ADS_LABEL='';  // cole aqui o rótulo da conversão "Clique no WhatsApp"
+  var ADS_LABEL='FyphCIHBh5cdEOmDofdE';  // cole aqui o rótulo da conversão "Clique no WhatsApp"
   var fromAds=/[?&](gclid|gbraid|wbraid|gad_source)=/.test(location.search);
   try{ if(fromAds){sessionStorage.setItem('lk_ads','1');} else {fromAds=sessionStorage.getItem('lk_ads')==='1';} }catch(e){}
   var links=document.querySelectorAll('a[href^="https://wa.me/"]');
   for(var i=0;i<links.length;i++){
     if(fromAds){ links[i].href+=encodeURIComponent(' (G)'); }
     links[i].addEventListener('click',function(){
-      if(window.gtag&&ADS_ID&&ADS_LABEL){ gtag('event','conversion',{send_to:ADS_ID+'/'+ADS_LABEL}); }
+      if(window.gtag&&ADS_ID&&ADS_LABEL){ gtag('event','conversion',{send_to:ADS_ID+'/'+ADS_LABEL,value:1.0,currency:'BRL'}); }
     });
   }
   if(ADS_ID&&!window.gtag){
